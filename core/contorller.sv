@@ -6,7 +6,7 @@ module contorller(
 	output alusrc
 	);
 	
-	reg[3:0] controls;
+	reg[5:0] controls;
 	
 	assign {op,regwrite,regdst,alusrc} = controls;
 	
