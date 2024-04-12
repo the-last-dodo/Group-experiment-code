@@ -1,0 +1,67 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/text2/simulation/qsim
+vhard_block
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 jXJ;Va?T3fS:K<BME^m:L0
+Ic_`j2Nh<;8I>e81_EX6Oc2
+R0
+Z2 w1712835141
+Z3 8project2.vo
+Z4 Fproject2.vo
+L0 61270
+Z5 OL;L;10.4;61
+Z6 !s108 1712835142.370000
+Z7 !s107 project2.vo|
+Z8 !s90 -work|work|project2.vo|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vproject2
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 f_Eo5S?@RKS2:9gKWO[UK3
+ICYlF_[AFd]ekfG1=bK19n2
+R0
+R2
+R3
+R4
+L0 32
+R5
+R6
+R7
+R8
+!i113 0
+R9
+vproject2_vlg_vec_tst
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 F8ORRURiaXcShNf_a]2ho2
+IVe7:YZmC:a5nY1:U[KoY_2
+R0
+w1712835140
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R5
+!s108 1712835142.560000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 0
+R9
