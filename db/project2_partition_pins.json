@@ -256,14 +256,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "aluop[1]",
-					"strict" : false
-				},
-				{
-					"name" : "aluop[2]",
-					"strict" : false
-				},
-				{
 					"name" : "regwrite",
 					"strict" : false
 				},
@@ -393,6 +385,14 @@
 				},
 				{
 					"name" : "aluout[31]",
+					"strict" : false
+				},
+				{
+					"name" : "regdst",
+					"strict" : false
+				},
+				{
+					"name" : "alusrc",
 					"strict" : false
 				},
 				{

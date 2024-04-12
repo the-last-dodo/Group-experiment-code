@@ -1,5 +1,5 @@
 Analysis & Synthesis report for project2
-Thu Apr 11 19:30:00 2024
+Fri Apr 12 16:38:14 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -20,14 +20,16 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Source assignments for irom_4096_32:comb_3|altsyncram:altsyncram_component|altsyncram_c8a1:auto_generated
  14. Parameter Settings for User Entity Instance: mips:_mips|datapath:dp|flopr:pcreg
- 15. Parameter Settings for User Entity Instance: irom_4096_32:comb_3|altsyncram:altsyncram_component
- 16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "mips:_mips|datapath:dp|alu:_alu"
- 18. Port Connectivity Checks: "mips:_mips|datapath:dp|adder:pcadd1"
- 19. Post-Synthesis Netlist Statistics for Top Partition
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
- 22. Analysis & Synthesis Suppressed Messages
+ 15. Parameter Settings for User Entity Instance: mips:_mips|datapath:dp|mux2:wrmux
+ 16. Parameter Settings for User Entity Instance: mips:_mips|datapath:dp|mux2:srcbmux
+ 17. Parameter Settings for User Entity Instance: irom_4096_32:comb_3|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "mips:_mips|datapath:dp|alu:_alu"
+ 20. Port Connectivity Checks: "mips:_mips|datapath:dp|adder:pcadd1"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,16 +56,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 11 19:30:00 2024          ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 12 16:38:14 2024          ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; project2                                       ;
 ; Top-level Entity Name              ; project2                                       ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 2,609                                          ;
-;     Total combinational functions  ; 1,651                                          ;
+; Total logic elements               ; 2,530                                          ;
+;     Total combinational functions  ; 1,570                                          ;
 ;     Dedicated logic registers      ; 1,054                                          ;
 ; Total registers                    ; 1054                                           ;
-; Total pins                         ; 263                                            ;
+; Total pins                         ; 265                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 131,072                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -170,13 +172,14 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
-;     Processors 8-14        ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-14        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -195,6 +198,8 @@ https://fpgasoftware.intel.com/eula.
 ; core/contorller.sv               ; yes             ; User SystemVerilog HDL File      ; D:/text2/core/contorller.sv                                                     ;         ;
 ; core/datapath.sv                 ; yes             ; User SystemVerilog HDL File      ; D:/text2/core/datapath.sv                                                       ;         ;
 ; core/alu.sv                      ; yes             ; User SystemVerilog HDL File      ; D:/text2/core/alu.sv                                                            ;         ;
+; core/mux2.sv                     ; yes             ; User SystemVerilog HDL File      ; D:/text2/core/mux2.sv                                                           ;         ;
+; core/signext.sv                  ; yes             ; User SystemVerilog HDL File      ; D:/text2/core/signext.sv                                                        ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                     ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
@@ -213,31 +218,31 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 2,609     ;
+; Estimated Total logic elements              ; 2,530     ;
 ;                                             ;           ;
-; Total combinational functions               ; 1651      ;
+; Total combinational functions               ; 1570      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1454      ;
-;     -- 3 input functions                    ; 120       ;
-;     -- <=2 input functions                  ; 77        ;
+;     -- 4 input functions                    ; 1369      ;
+;     -- 3 input functions                    ; 109       ;
+;     -- <=2 input functions                  ; 92        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 1560      ;
-;     -- arithmetic mode                      ; 91        ;
+;     -- normal mode                          ; 1511      ;
+;     -- arithmetic mode                      ; 59        ;
 ;                                             ;           ;
 ; Total registers                             ; 1054      ;
 ;     -- Dedicated logic registers            ; 1054      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 263       ;
+; I/O pins                                    ; 265       ;
 ; Total memory bits                           ; 131072    ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 1086      ;
-; Total fan-out                               ; 10427     ;
-; Average fan-out                             ; 3.20      ;
+; Total fan-out                               ; 10086     ;
+; Average fan-out                             ; 3.17      ;
 +---------------------------------------------+-----------+
 
 
@@ -246,16 +251,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+-----------------+--------------+
-; |project2                                 ; 1651 (0)            ; 1054 (0)                  ; 131072      ; 0            ; 0       ; 0         ; 263  ; 0            ; |project2                                                                                    ; project2        ; work         ;
+; |project2                                 ; 1570 (0)            ; 1054 (0)                  ; 131072      ; 0            ; 0       ; 0         ; 265  ; 0            ; |project2                                                                                    ; project2        ; work         ;
 ;    |irom_4096_32:comb_3|                  ; 0 (0)               ; 0 (0)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|irom_4096_32:comb_3                                                                ; irom_4096_32    ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|irom_4096_32:comb_3|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;          |altsyncram_c8a1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|irom_4096_32:comb_3|altsyncram:altsyncram_component|altsyncram_c8a1:auto_generated ; altsyncram_c8a1 ; work         ;
-;    |mips:_mips|                           ; 1651 (0)            ; 1054 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips                                                                         ; mips            ; work         ;
-;       |contorller:c|                      ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|contorller:c                                                            ; contorller      ; work         ;
-;       |datapath:dp|                       ; 1640 (0)            ; 1054 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|datapath:dp                                                             ; datapath        ; work         ;
-;          |alu:_alu|                       ; 181 (181)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|datapath:dp|alu:_alu                                                    ; alu             ; work         ;
+;    |mips:_mips|                           ; 1570 (0)            ; 1054 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips                                                                         ; mips            ; work         ;
+;       |contorller:c|                      ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|contorller:c                                                            ; contorller      ; work         ;
+;       |datapath:dp|                       ; 1562 (0)            ; 1054 (0)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|datapath:dp                                                             ; datapath        ; work         ;
+;          |alu:_alu|                       ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|datapath:dp|alu:_alu                                                    ; alu             ; work         ;
 ;          |flopr:pcreg|                    ; 30 (30)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|datapath:dp|flopr:pcreg                                                 ; flopr           ; work         ;
-;          |regfile:_rf|                    ; 1429 (1429)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|datapath:dp|regfile:_rf                                                 ; regfile         ; work         ;
+;          |mux2:srcbmux|                   ; 707 (707)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|datapath:dp|mux2:srcbmux                                                ; mux2            ; work         ;
+;          |mux2:wrmux|                     ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|datapath:dp|mux2:wrmux                                                  ; mux2            ; work         ;
+;          |regfile:_rf|                    ; 756 (756)           ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |project2|mips:_mips|datapath:dp|regfile:_rf                                                 ; regfile         ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -309,11 +316,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |project2|mips:_mips|datapath:dp|regfile:_rf|rf[3][17] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |project2|mips:_mips|datapath:dp|regfile:_rf|rf[2][5]  ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |project2|mips:_mips|datapath:dp|alu:_alu|Mux15        ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |project2|mips:_mips|datapath:dp|regfile:_rf|rd2[3]    ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |project2|mips:_mips|datapath:dp|regfile:_rf|rd1[27]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |project2|mips:_mips|datapath:dp|regfile:_rf|rf[3][3]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |project2|mips:_mips|datapath:dp|regfile:_rf|rf[2][15] ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |project2|mips:_mips|datapath:dp|regfile:_rf|rd1[1]    ;
+; 34:1               ; 32 bits   ; 704 LEs       ; 704 LEs              ; 0 LEs                  ; No         ; |project2|mips:_mips|datapath:dp|mux2:srcbmux|y[1]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -333,6 +339,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+-------+--------------------------------------------------------+
 ; WIDTH          ; 32    ; Signed Integer                                         ;
 +----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:_mips|datapath:dp|mux2:wrmux ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 5     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mips:_mips|datapath:dp|mux2:srcbmux ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -443,24 +469,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 263                         ;
+; boundary_port         ; 265                         ;
 ; cycloneiii_ff         ; 1054                        ;
 ;     CLR               ; 30                          ;
 ;     ENA               ; 1024                        ;
-; cycloneiii_lcell_comb ; 1653                        ;
-;     arith             ; 91                          ;
+; cycloneiii_lcell_comb ; 1571                        ;
+;     arith             ; 59                          ;
 ;         2 data inputs ; 27                          ;
-;         3 data inputs ; 64                          ;
-;     normal            ; 1562                        ;
+;         3 data inputs ; 32                          ;
+;     normal            ; 1512                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 48                          ;
-;         3 data inputs ; 56                          ;
-;         4 data inputs ; 1454                        ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 63                          ;
+;         3 data inputs ; 77                          ;
+;         4 data inputs ; 1369                        ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 11.10                       ;
-; Average LUT depth     ; 8.41                        ;
+; Average LUT depth     ; 8.18                        ;
 +-----------------------+-----------------------------+
 
 
@@ -479,7 +505,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Apr 11 19:29:52 2024
+    Info: Processing started: Fri Apr 12 16:38:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off project2 -c project2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -505,18 +531,33 @@ Info (12021): Found 1 design units, including 1 entities, in source file iram_40
     Info (12023): Found entity 1: iram_4096_32 File: D:/text2/iram_4096_32.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file core/alu.sv
     Info (12023): Found entity 1: alu File: D:/text2/core/alu.sv Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at project2.sv(35): instance has no name File: D:/text2/project2.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file core/mux2.sv
+    Info (12023): Found entity 1: mux2 File: D:/text2/core/mux2.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/signext.sv
+    Info (12023): Found entity 1: signext File: D:/text2/core/signext.sv Line: 1
+Critical Warning (10846): Verilog HDL Instantiation warning at project2.sv(39): instance has no name File: D:/text2/project2.sv Line: 39
 Info (12127): Elaborating entity "project2" for the top level hierarchy
-Info (12128): Elaborating entity "mips" for hierarchy "mips:_mips" File: D:/text2/project2.sv Line: 26
-Info (12128): Elaborating entity "contorller" for hierarchy "mips:_mips|contorller:c" File: D:/text2/core/mips.sv Line: 16
-Info (12128): Elaborating entity "datapath" for hierarchy "mips:_mips|datapath:dp" File: D:/text2/core/mips.sv Line: 31
-Info (12128): Elaborating entity "flopr" for hierarchy "mips:_mips|datapath:dp|flopr:pcreg" File: D:/text2/core/datapath.sv Line: 32
-Info (12128): Elaborating entity "adder" for hierarchy "mips:_mips|datapath:dp|adder:pcadd1" File: D:/text2/core/datapath.sv Line: 38
-Info (12128): Elaborating entity "alu" for hierarchy "mips:_mips|datapath:dp|alu:_alu" File: D:/text2/core/datapath.sv Line: 47
+Info (12128): Elaborating entity "mips" for hierarchy "mips:_mips" File: D:/text2/project2.sv Line: 30
+Info (12128): Elaborating entity "contorller" for hierarchy "mips:_mips|contorller:c" File: D:/text2/core/mips.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at contorller.sv(17): truncated value with size 6 to match size of target (4) File: D:/text2/core/contorller.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at contorller.sv(18): truncated value with size 6 to match size of target (4) File: D:/text2/core/contorller.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at contorller.sv(19): truncated value with size 6 to match size of target (4) File: D:/text2/core/contorller.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at contorller.sv(20): truncated value with size 6 to match size of target (4) File: D:/text2/core/contorller.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at contorller.sv(21): truncated value with size 6 to match size of target (4) File: D:/text2/core/contorller.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at contorller.sv(22): truncated value with size 6 to match size of target (4) File: D:/text2/core/contorller.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at contorller.sv(26): truncated value with size 6 to match size of target (4) File: D:/text2/core/contorller.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at contorller.sv(28): truncated value with size 6 to match size of target (4) File: D:/text2/core/contorller.sv Line: 28
+Info (12128): Elaborating entity "datapath" for hierarchy "mips:_mips|datapath:dp" File: D:/text2/core/mips.sv Line: 37
+Info (12128): Elaborating entity "flopr" for hierarchy "mips:_mips|datapath:dp|flopr:pcreg" File: D:/text2/core/datapath.sv Line: 26
+Info (12128): Elaborating entity "adder" for hierarchy "mips:_mips|datapath:dp|adder:pcadd1" File: D:/text2/core/datapath.sv Line: 32
+Info (12128): Elaborating entity "alu" for hierarchy "mips:_mips|datapath:dp|alu:_alu" File: D:/text2/core/datapath.sv Line: 42
 Warning (10240): Verilog HDL Always Construct warning at alu.sv(10): inferring latch(es) for variable "overflow", which holds its previous value in one or more paths through the always construct File: D:/text2/core/alu.sv Line: 10
 Info (10041): Inferred latch for "overflow" at alu.sv(10) File: D:/text2/core/alu.sv Line: 10
-Info (12128): Elaborating entity "regfile" for hierarchy "mips:_mips|datapath:dp|regfile:_rf" File: D:/text2/core/datapath.sv Line: 63
-Info (12128): Elaborating entity "irom_4096_32" for hierarchy "irom_4096_32:comb_3" File: D:/text2/project2.sv Line: 35
+Info (12128): Elaborating entity "regfile" for hierarchy "mips:_mips|datapath:dp|regfile:_rf" File: D:/text2/core/datapath.sv Line: 59
+Info (12128): Elaborating entity "mux2" for hierarchy "mips:_mips|datapath:dp|mux2:wrmux" File: D:/text2/core/datapath.sv Line: 68
+Info (12128): Elaborating entity "signext" for hierarchy "mips:_mips|datapath:dp|signext:se" File: D:/text2/core/datapath.sv Line: 73
+Info (12128): Elaborating entity "mux2" for hierarchy "mips:_mips|datapath:dp|mux2:srcbmux" File: D:/text2/core/datapath.sv Line: 81
+Info (12128): Elaborating entity "irom_4096_32" for hierarchy "irom_4096_32:comb_3" File: D:/text2/project2.sv Line: 39
 Info (12128): Elaborating entity "altsyncram" for hierarchy "irom_4096_32:comb_3|altsyncram:altsyncram_component" File: D:/text2/irom_4096_32.v Line: 82
 Info (12130): Elaborated megafunction instantiation "irom_4096_32:comb_3|altsyncram:altsyncram_component" File: D:/text2/irom_4096_32.v Line: 82
 Info (12133): Instantiated megafunction "irom_4096_32:comb_3|altsyncram:altsyncram_component" with the following parameter: File: D:/text2/irom_4096_32.v Line: 82
@@ -540,22 +581,24 @@ Info (12128): Elaborating entity "altsyncram_c8a1" for hierarchy "irom_4096_32:c
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "pc[0]" is stuck at GND File: D:/text2/project2.sv Line: 5
     Warning (13410): Pin "pc[1]" is stuck at GND File: D:/text2/project2.sv Line: 5
+    Warning (13410): Pin "aluop[1]" is stuck at GND File: D:/text2/project2.sv Line: 7
+    Warning (13410): Pin "aluop[2]" is stuck at GND File: D:/text2/project2.sv Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file D:/text2/output_files/project2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "wren" File: D:/text2/project2.sv Line: 4
-Info (21057): Implemented 2966 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2891 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 260 output pins
-    Info (21061): Implemented 2671 logic cells
+    Info (21059): Implemented 262 output pins
+    Info (21061): Implemented 2594 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Thu Apr 11 19:30:00 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 4875 megabytes
+    Info: Processing ended: Fri Apr 12 16:38:14 2024
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +------------------------------------------+

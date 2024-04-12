@@ -7,6 +7,8 @@ module project2(
 	output[2:0] aluop,
 	output regwrite,
 	output[31:0] aluout,
+	output regdst,
+	output alusrc,
 	output[31:0] reg_t1,reg_t2,reg_t3,reg_t4,reg_t5
 );
 	
@@ -18,6 +20,8 @@ module project2(
 		.aluop(aluop),
 		.regwrite(regwrite),
 		.aluout(aluout),
+		.regdst(regdst),
+		.alusrc(alusrc),
 		.reg_t1(reg_t1),
 		.reg_t2(reg_t2),
 		.reg_t3(reg_t3),

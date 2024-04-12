@@ -26,15 +26,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Apr 11 19:32:20 2024
+    Info: Processing started: Fri Apr 12 16:38:50 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off project2 -c project2 --vector_source=D:/text2/Waveform.vwf --testbench_file=D:/text2/simulation/qsim/Waveform.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 hen writing test bench files
 
 utput pin "reg_t1[26]" in vector source file when writing test bench files
-
-rning (201005): Ignoring output pin "reg_t4[5]" in vector source file when writing test bench files
 
 
 Completed successfully. 
@@ -62,13 +60,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Apr 11 19:32:20 2024
+    Info: Processing started: Fri Apr 12 16:38:50 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=D:/text2/simulation/qsim/ project2 -c project2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file project2.vo in folder "D:/text2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4662 megabytes
-    Info: Processing ended: Thu Apr 11 19:32:21 2024
+    Info: Peak virtual memory: 4667 megabytes
+    Info: Processing ended: Fri Apr 12 16:38:51 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
@@ -98,7 +96,7 @@ Reading C:/modeltech64_10.4/tcl/vsim/pref.tcl
 
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
-# Start time: 19:32:22 on Apr 11,2024
+# Start time: 16:38:52 on Apr 12,2024
 # vlog -work work project2.vo 
 
 # -- Compiling module project2
@@ -110,12 +108,12 @@ Reading C:/modeltech64_10.4/tcl/vsim/pref.tcl
 # Top level modules:
 # 	project2
 
-# End time: 19:32:22 on Apr 11,2024, Elapsed time: 0:00:00
+# End time: 16:38:52 on Apr 12,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
 
-# Start time: 19:32:22 on Apr 11,2024
+# Start time: 16:38:52 on Apr 12,2024
 # vlog -work work Waveform.vwf.vt 
 
 # -- Compiling module project2_vlg_vec_tst
@@ -124,13 +122,15 @@ Reading C:/modeltech64_10.4/tcl/vsim/pref.tcl
 # Top level modules:
 # 	project2_vlg_vec_tst
 
-# End time: 19:32:22 on Apr 11,2024, Elapsed time: 0:00:00
+# End time: 16:38:52 on Apr 12,2024, Elapsed time: 0:00:00
+
 # Errors: 0, Warnings: 0
 
 # vsim -c -do "project2.do" 
-# Start time: 19:32:22 on Apr 11,2024
+# Start time: 16:38:52 on Apr 12,2024
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # 
+
 # //  ModelSim SE-64 10.4 Dec  3 2014 
 # //
 # //  Copyright 1991-2014 Mentor Graphics Corporation
@@ -172,10 +172,10 @@ Reading C:/modeltech64_10.4/tcl/vsim/pref.tcl
 
 # after#27
 
-# ** Note: $finish    : Waveform.vwf.vt(67)
+# ** Note: $finish    : Waveform.vwf.vt(71)
 #    Time: 1 us  Iteration: 0  Instance: /project2_vlg_vec_tst
 
-# End time: 19:32:23 on Apr 11,2024, Elapsed time: 0:00:01
+# End time: 16:38:53 on Apr 12,2024, Elapsed time: 0:00:01
 # Errors: 2, Warnings: 1
 
 Completed successfully. 
@@ -188,7 +188,7 @@ Reading D:/text2/simulation/qsim/project2.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/text2/simulation/qsim/project2_20240411193224.sim.vwf
+Writing the resulting VWF to D:/text2/simulation/qsim/project2_20240412163853.sim.vwf
 
 Finished VCD to VWF conversion.
 
