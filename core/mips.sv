@@ -8,6 +8,10 @@ module mips(
 	output[31:0] aluout,
 	output regdst,
 	output alusrc,
+	output[31:0] writedata,
+	output mem2reg,
+	output memwrite,
+	input[31:0] readdata,
 	output wire[31:0] reg_t1,reg_t2,reg_t3,reg_t4,reg_t5
 );
 		
@@ -16,7 +20,9 @@ module mips(
 		.op(aluop),
 		.regwrite(regwrite),
 		.regdst(regdst),
-		.alusrc(alusrc)
+		.alusrc(alusrc),
+		.mem2reg(mem2reg),
+		.memwrite(memwrite)
 	);
 	
 	datapath dp(
@@ -29,6 +35,10 @@ module mips(
 		.aluout(aluout),
 		.regdst(regdst),
 		.alusrc(alusrc),
+		.writedata(writedata),
+		.memwrite(memwrite),
+		.mem2reg(mem2reg),
+		.readdata(readdata),
 		.reg_t1(reg_t1),
 		.reg_t2(reg_t2),
 		.reg_t3(reg_t3),

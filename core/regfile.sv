@@ -19,8 +19,8 @@ module regfile(
 		if(we3) begin
 			rf[wa3] <=wd3;
 		end else begin
-			rf[2] <=32'h0000_0000;
-			rf[3] <=32'h0000_0000;
+			rf[2] <=32'h0000_0003;
+			rf[3] <=32'h0000_0005;
 		end
 	end
 	

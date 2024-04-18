@@ -8,6 +8,10 @@ module datapath(
 	output[31:0] aluout,
 	input regdst, 
 	input alusrc,
+	output[31:0] writedata,
+	input memwrite,
+	input mem2reg,
+	input[31:0] readdata,
 	output wire[31:0] reg_t1,reg_t2,reg_t3,reg_t4,reg_t5
 );
 	wire[31:0] pcplus4;
@@ -15,7 +19,9 @@ module datapath(
 	wire[4:0] writereg;
 	wire[31:0] signimm;
 	wire[31:0] selb;
+	wire[31:0] result;
 	
+	assign writedata = selb;
 	
 	//PC控制---------------------------
 	flopr #(32) pcreg(
@@ -48,7 +54,7 @@ module datapath(
 		.ra1(instr[25:21]),
 		.ra2(instr[20:16]),
 		.wa3(writereg),
-		.wd3(aluout),
+		.wd3(result),
 		.rd1(srca),
 		.rd2(selb),
 		.reg_t1(reg_t1),
@@ -79,4 +85,12 @@ module datapath(
 		.s(alusrc),
 		.y(srcb)
 	);
+	
+	mux2 #(32) resultmux(
+		.d0(aluout),
+		.d1(readdata),
+		.s(mem2reg),
+		.y(result)
+	);
+	
 endmodule
