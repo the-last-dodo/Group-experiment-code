@@ -716,6 +716,270 @@
 					"strict" : false
 				},
 				{
+					"name" : "branch",
+					"strict" : false
+				},
+				{
+					"name" : "jump",
+					"strict" : false
+				},
+				{
+					"name" : "srca[0]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[1]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[2]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[3]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[4]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[5]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[6]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[7]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[8]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[9]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[10]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[11]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[12]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[13]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[14]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[15]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[16]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[17]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[18]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[19]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[20]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[21]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[22]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[23]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[24]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[25]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[26]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[27]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[28]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[29]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[30]",
+					"strict" : false
+				},
+				{
+					"name" : "srca[31]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[2]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[3]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[4]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[5]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[6]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[7]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[8]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[9]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[10]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[11]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[12]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[13]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[14]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[15]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[16]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[17]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[18]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[19]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[20]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[21]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[22]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[23]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[24]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[25]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[26]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[27]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[28]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[29]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[30]",
+					"strict" : false
+				},
+				{
+					"name" : "srcb[31]",
+					"strict" : false
+				},
+				{
 					"name" : "reg_t1[0]",
 					"strict" : false
 				},

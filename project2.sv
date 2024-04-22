@@ -14,6 +14,9 @@ module project2(
 	output mem2reg,
 	output[31:0] readdata,
 	output[11:0] q,
+	output branch,
+	output jump,
+	output wire[31:0] srca,srcb,
 	output[31:0] reg_t1,reg_t2,reg_t3,reg_t4,reg_t5
 );
 	
@@ -31,6 +34,10 @@ module project2(
 		.mem2reg(mem2reg),
 		.memwrite(memwrite),
 		.readdata(readdata),
+		.branch(branch),
+		.jump(jump),
+		.srca(srca),
+		.srcb(srcb),
 		.reg_t1(reg_t1),
 		.reg_t2(reg_t2),
 		.reg_t3(reg_t3),

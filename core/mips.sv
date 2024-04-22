@@ -12,9 +12,15 @@ module mips(
 	output mem2reg,
 	output memwrite,
 	input[31:0] readdata,
+	output branch,
+	output jump,
+	output wire[31:0] srca,srcb,
 	output wire[31:0] reg_t1,reg_t2,reg_t3,reg_t4,reg_t5
 );
 		
+	//wire branch;
+	//wire jump;
+	
 	contorller c(
 		.instr(instr),
 		.op(aluop),
@@ -22,7 +28,9 @@ module mips(
 		.regdst(regdst),
 		.alusrc(alusrc),
 		.mem2reg(mem2reg),
-		.memwrite(memwrite)
+		.memwrite(memwrite),
+		.branch(branch),
+		.jump(jump),
 	);
 	
 	datapath dp(
@@ -39,6 +47,10 @@ module mips(
 		.memwrite(memwrite),
 		.mem2reg(mem2reg),
 		.readdata(readdata),
+		.branch(branch),
+		.jump(jump),
+		.srca(srca),
+		.srcb(srcb),
 		.reg_t1(reg_t1),
 		.reg_t2(reg_t2),
 		.reg_t3(reg_t3),

@@ -2,26 +2,26 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:39:24 on Apr 18,2024
+# Start time: 20:25:19 on Apr 22,2024
 # vlog -work work project2.vo 
 # -- Compiling module project2
 # -- Compiling module hard_block
 # 
 # Top level modules:
 # 	project2
-# End time: 19:39:24 on Apr 18,2024, Elapsed time: 0:00:00
+# End time: 20:25:19 on Apr 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 19:39:24 on Apr 18,2024
+# Start time: 20:25:19 on Apr 22,2024
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module project2_vlg_vec_tst
 # 
 # Top level modules:
 # 	project2_vlg_vec_tst
-# End time: 19:39:24 on Apr 18,2024, Elapsed time: 0:00:00
+# End time: 20:25:19 on Apr 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -do "project2.do" 
-# Start time: 19:39:24 on Apr 18,2024
+# Start time: 20:25:19 on Apr 22,2024
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # 
 # //  ModelSim SE-64 10.4 Dec  3 2014 
@@ -56,13 +56,13 @@
 # Loading cycloneive_ver.cycloneive_mux41
 # Loading cycloneive_ver.cycloneive_ena_reg
 # Loading cycloneive_ver.cycloneive_lcell_comb
-# Loading altera_ver.dffeas
 # Loading cycloneive_ver.cycloneive_ram_block
 # Loading cycloneive_ver.cycloneive_ram_register
 # Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading altera_ver.dffeas
 # Loading altera_ver.PRIM_GDFF_LOW
 # after#27
-# ** Note: $finish    : Waveform.vwf.vt(81)
+# ** Note: $finish    : Waveform.vwf.vt(89)
 #    Time: 1 us  Iteration: 0  Instance: /project2_vlg_vec_tst
-# End time: 19:39:25 on Apr 18,2024, Elapsed time: 0:00:01
+# End time: 20:25:21 on Apr 22,2024, Elapsed time: 0:00:02
 # Errors: 2, Warnings: 1
