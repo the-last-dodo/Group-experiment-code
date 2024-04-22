@@ -1,1 +1,4 @@
-# Group-experiment-code
+# 实验六已上传
+
+#使用方法
+## 1.点击
