@@ -2,7 +2,7 @@
 
 # 使用方法
 ## 1.点击右边的Releases下的标签，选择实验
-## 2.点击code，之后点击Download  .zip
+## 2.点击Source code(zip)下载
 ## 3.解压到D盘
 ## 4.文件夹重命名为text2
 ## 5.quartus进入项目后先编译运行，之后才能仿真
